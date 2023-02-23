@@ -7,7 +7,7 @@ const props = defineProps({
 })
 // Show.vueを追加時にconst hasErrors = computed(() => あたりでUncaught TypeError：が発生した
 // →なぜか解決した
-// const hasErrors = computed(() => Object.keys(props.errors).length > 0);
+const hasErrors = computed(() => Object.keys(props.errors).length > 0);
 </script>
 
 <template>
