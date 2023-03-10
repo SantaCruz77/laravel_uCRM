@@ -23,8 +23,7 @@ class PurchaseController extends Controller
         // dd(Order::paginate(50));
 
         $orders = Order::groupBy('id')
-            ->selectRaw('id, sum(subtotal) as total,
-        customer_name, status, created_at')
+            ->selectRaw('id, sum(subtotal) as total,customer_name, status, created_at')
             ->paginate(50);
 
         // dd($orders);

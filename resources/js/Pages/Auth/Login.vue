@@ -1,5 +1,7 @@
 <script setup>
 import Checkbox from '@/Components/Checkbox.vue';
+// DangerButtonを読み込み
+import DangerButton from '@/Components/DangerButton.vue';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
@@ -73,6 +75,10 @@ const submit = () => {
                     <Checkbox name="remember" v-model:checked="form.remember" />
                     <span class="ml-2 text-sm text-gray-600">Remember me</span>
                 </label>
+            </div>
+            
+            <div class="block mt-4">
+                <DangerButton />
             </div>
 
             <div class="flex items-center justify-end mt-4">
